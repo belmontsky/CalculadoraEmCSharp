@@ -1,4 +1,4 @@
-﻿namespace Calculator
+namespace Calculator
 {
     class Program
     {
@@ -47,10 +47,17 @@
             Console.WriteLine("");
 
             float resultado = v1 + v2;
+            if (resultado == 0)
+            {
+                Console.WriteLine("Não foi possível somar os valores, valor 0.");
+            }
+            else
+            {
+                Console.WriteLine($"O resultado da soma é {resultado}");
+            }
             // Console.WriteLine("O resultado da soma é " + resultado);
             // Console.WriteLine($"O resultado da soma é {v1 + v2}");
             //  Console.WriteLine("O resultado da soma é (v1 + v2");
-            Console.WriteLine($"O resultado da soma é {resultado}");
             Console.ReadKey();
             Menu();
         }
@@ -67,7 +74,14 @@
             Console.WriteLine("");
 
             float resultado = v1 - v2;
-            Console.WriteLine($"O resultado da subtração é: {resultado}");
+            if (resultado == 0)
+            {
+                Console.WriteLine("Não foi possível subtrair os valores, valor 0.");
+            }
+            else
+            {
+                Console.WriteLine($"O resultado da subtração é: {resultado}");
+            }
             Console.ReadKey();
             Menu();
         }
@@ -85,7 +99,14 @@
             Console.WriteLine("");
 
             float resultado = v1 / v2;
-            Console.WriteLine($"O reultado da divisão é: {resultado}");
+            if (v2 == 0)
+            {
+                Console.WriteLine("Não foi possível dividir os valores, valor 0.");
+            }
+            else
+            {
+                Console.WriteLine($"O reultado da divisão é: {resultado}");
+            }
             Console.ReadKey();
             Menu();
         }
@@ -103,12 +124,18 @@
             Console.WriteLine("");
 
             float resultado = v1 * v2;
-            Console.WriteLine("O resultado da multiplicação é: " + (v1 * v2));
+            if (v2 == 0)
+            {
+                Console.WriteLine("Não foi possível multiplicar os valores, valor 0.");
+            }
+            else
+            {
+                Console.WriteLine("O resultado da multiplicação é: " + (v1 * v2));
+            }
             Console.ReadKey();
             Menu();
         }
 
     }
-
 
 }
